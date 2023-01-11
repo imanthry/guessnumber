@@ -1,0 +1,17 @@
+import random
+number = random.randint(1, 100)
+leave = False
+while leave == False:
+    guess = input("Enter your guess: ")
+    try:
+        guess = int(guess)
+    except:
+        print("Please enter a whole number")
+    else:
+        if guess == number:
+            print("Well done you guessed correctly!")
+            leave = True
+        if guess > number:
+            print("Too high!")
+        if guess < number:
+            print("Too low!")
